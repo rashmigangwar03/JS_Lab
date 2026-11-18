@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Save Note</title>
+</head>
+<body>
+
+    <input type="text" id="noteBox">
+    <button id="saveBtn">Save</button>
+
+    <script>
+        const box = document.getElementById("noteBox");
+        const saveBtn = document.getElementById("saveBtn");
+
+        box.value = localStorage.getItem("note") || "";
+
+        saveBtn.addEventListener("click", function () {
+            localStorage.setItem("note", box.value);
+        });
+    </script>
+
+</body>
+</html>

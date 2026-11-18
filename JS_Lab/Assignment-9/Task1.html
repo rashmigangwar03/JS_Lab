@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Text</title>
+</head>
+<body>
+
+    <h1 id="heading">Welcome</h1>
+    <button id="changeBtn">Change text</button>
+
+    <script>
+        const heading = document.getElementById("heading");
+        const button = document.getElementById("changeBtn");
+
+        button.addEventListener("click", function () {
+            heading.textContent = "Button clicked";
+        });
+    </script>
+
+</body>
+</html>
